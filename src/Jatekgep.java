@@ -73,8 +73,25 @@ public class Jatekgep {
         if (tet>=minimumTet && tet<=maximumTet) {
             return true;
         } else {
-            System.err.println();
+            System.err.println("A tét nem lehet kissebb, mint a minimum tét, és nem lehet nagyiobb mint a maximum!");
+            return false;
         }
-
     }
+
+    public double jatszik(double tet){
+        return 0.0;
+    }
+
+    public double getProfit(){
+        return osszesBevet-osszesKifizetes;
+    }
+
+    public String getAdatlap(){
+        return getNev()+ " | Tét: "+ getMinimumTet() + "--" + getMaximumTet()+" | Körök: " + getJatszottKorok();
+    }
+
+    public String getStatisztika(){
+        return "Bevétel: " + getOsszesBevet() + "Ft | Kifizetés: "+ getOsszesKifizetes()+ " | Profit: " + (osszesBevet-osszesKifizetes) + " Ft";
+    }
+
 }
